@@ -1,4 +1,4 @@
-<img width="975" height="545" alt="image" src="https://github.com/user-attachments/assets/b27ffc7c-497d-4bb6-a3c1-d4c48efe9e9c" /># Static Routing using SDN Controller (Ryu + Mininet)
+# Static Routing using SDN Controller (Ryu + Mininet)
 
 ## 📌 Project Overview
 This project demonstrates **Static Routing using Software Defined Networking (SDN)** with the **Ryu Controller** and **Mininet emulator**.
