@@ -110,6 +110,30 @@ Expected Output:
 ```
 
 EXPECTED OUTPUT SCREENSHOTS
+## 📚 References
 
+1. Ryu SDN Framework Documentation  
+   https://ryu.readthedocs.io/
+
+2. Mininet Official Documentation  
+   http://mininet.org/documentation/
+
+3. Open vSwitch Documentation  
+   https://docs.openvswitch.org/
+
+4. OpenFlow Switch Specification (Version 1.3.0)  
+   https://opennetworking.org/wp-content/uploads/2014/10/openflow-spec-v1.3.0.pdf
+
+5. Ryu Simple Switch Example  
+   https://github.com/faucetsdn/ryu/blob/master/ryu/app/simple_switch_13.py
+
+6. Ubuntu Documentation (Package Installation & Networking)  
+   https://help.ubuntu.com/
+
+7. Eventlet Documentation  
+   https://eventlet.readthedocs.io/
+
+8. GitHub Documentation (README formatting)  
+   https://docs.github.com/en/get-started/writing-on-github
 
   
