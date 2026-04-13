@@ -111,7 +111,21 @@ Expected Output:
 
 EXPECTED OUTPUT SCREENSHOTS
 ## 📸 Controller Running
-![Controller](images/CN_Image1.png)
+![Controller](images/CN_Image4.png)
+![Controller](images/CN_Image8.png)
+## 📸 Mininet Topology
+![Topology](images/CN_Image1.png)
+## 📸 Ping Success
+![Ping](images/CN_Image2.png)
+![Ping](images/CN_Image9.png)
+## 📸 Flow Table - s1
+![Flow s1](images/CN_Image5.png)
+## 📸 Flow Table - s2
+![Flow s2](images/CN_Image6.png)
+![Flow s2](images/CN_Image10.png)
+
+
+
 ## 📚 References
 
 1. Ryu SDN Framework Documentation  
