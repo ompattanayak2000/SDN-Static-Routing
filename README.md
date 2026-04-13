@@ -26,49 +26,88 @@ This project implements **static routing using a centralized SDN controller**, w
 
 ---
 
-⚙️ Setup & Execution Steps
-🔹 Step 1: Install Dependencies
+## ⚙️ Setup & Execution Steps
+
+### 🔹 Step 1: Install Dependencies
+```bash
 sudo apt update
 sudo apt install mininet openvswitch-switch python3-pip python3.10-venv -y
-🔹 Step 2: Create Virtual Environment
+```
+
+### 🔹 Step 2: Create Virtual Environment
+```bash
 python3 -m venv ryu-env
 source ryu-env/bin/activate
-🔹 Step 3: Install Ryu and Dependencies
+```
+
+### 🔹 Step 3: Install Ryu and Dependencies
+```bash
 pip install ryu==4.34
 pip install eventlet==0.30.2
 pip install dnspython==1.16.0
-🔹 Step 4: Start Ryu Controller (Terminal 1)
+```
+
+### 🔹 Step 4: Start Ryu Controller (Terminal 1)
+```bash
 cd ~
 source ryu-env/bin/activate
 export EVENTLET_NO_GREENDNS=yes
 ryu-manager ryu.app.simple_switch_13
-🔹 Step 5: Run Mininet Topology (Terminal 2)
+```
+
+### 🔹 Step 5: Run Mininet Topology (Terminal 2)
+```bash
 sudo mn --topo linear,2 --controller remote
-🔹 Step 6: Test Connectivity (Mininet CLI)
+```
+
+### 🔹 Step 6: Test Connectivity (Mininet CLI)
+```bash
 pingall
+```
 
 Expected Output:
-
+```
 0% packet loss
-🔹 Step 7: Exit Mininet
+```
+
+### 🔹 Step 7: Exit Mininet
+```bash
 exit
-🔹 Step 8: Check Flow Rules
+```
+
+### 🔹 Step 8: Check Flow Rules
+```bash
 sudo ovs-ofctl -O OpenFlow13 dump-flows s1
 sudo ovs-ofctl -O OpenFlow13 dump-flows s2
-🔹 Step 9: Regression Test
-Delete flows
+```
+
+### 🔹 Step 9: Regression Test
+
+Delete flows:
+```bash
 sudo ovs-ofctl del-flows s1
 sudo ovs-ofctl del-flows s2
-Restart Controller (Terminal 1)
+```
+
+Restart Controller (Terminal 1):
+```bash
 ryu-manager ryu.app.simple_switch_13
-Run Mininet again
+```
+
+Run Mininet again:
+```bash
 sudo mn --topo linear,2 --controller remote
-Test again
+```
+
+Test again:
+```bash
 pingall
+```
 
 Expected Output:
-
+```
 0% packet loss
+```
 
 EXPECTED OUTPUT SCREENSHOTS
 
