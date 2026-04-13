@@ -110,6 +110,8 @@ Expected Output:
 ```
 
 EXPECTED OUTPUT SCREENSHOTS
+## 📸 Controller Running
+![Controller](images/CN_Image1.png)
 ## 📚 References
 
 1. Ryu SDN Framework Documentation  
