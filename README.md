@@ -26,47 +26,49 @@ This project implements **static routing using a centralized SDN controller**, w
 
 ---
 
-## ⚙️ Setup Instructions
+⚙️ Setup & Execution Steps
+🔹 Step 1: Install Dependencies
+sudo apt update
+sudo apt install mininet openvswitch-switch python3-pip python3.10-venv -y
+🔹 Step 2: Create Virtual Environment
+python3 -m venv ryu-env
+source ryu-env/bin/activate
+🔹 Step 3: Install Ryu and Dependencies
+pip install ryu==4.34
+pip install eventlet==0.30.2
+pip install dnspython==1.16.0
+🔹 Step 4: Start Ryu Controller (Terminal 1)
+cd ~
+source ryu-env/bin/activate
+export EVENTLET_NO_GREENDNS=yes
+ryu-manager ryu.app.simple_switch_13
+🔹 Step 5: Run Mininet Topology (Terminal 2)
+sudo mn --topo linear,2 --controller remote
+🔹 Step 6: Test Connectivity (Mininet CLI)
+pingall
 
-### 1. Install Dependencies
-  sudo apt update
-  sudo apt install mininet openvswitch-switch python3-pip -y
-Step 2: Create Virtual Environment
-  python3 -m venv ryu-env
-  source ryu-env/bin/activate
-Step 3: Install Ryu and Dependencies
-  pip install ryu==4.34
-  pip install eventlet==0.30.2
-  pip install dnspython==1.16.0
-Step 4: Start Ryu Controller
-  (Open Terminal 1)
-  cd ~
-  source ryu-env/bin/activate
-  export EVENTLET_NO_GREENDNS=yes
-  ryu-manager ryu.app.simple_switch_13
-Step 5: Run Mininet Topology
-  (Open Terminal 2)
-  sudo mn --topo linear,2 --controller remote
-Step 6: Test Connectivity
-  (In Mininet CLI)
-  pingall
-Step 7: Exit Mininet
-  exit
-Step 8: Check Flow Rules
-  sudo ovs-ofctl -O OpenFlow13 dump-flows s1
-  sudo ovs-ofctl -O OpenFlow13 dump-flows s2
-Step 9: Regression Test
-  Delete flows
-  sudo ovs-ofctl del-flows s1
-  sudo ovs-ofctl del-flows s2
-  Restart Controller
-  (Go to Terminal 1)
-  CTRL + C
-  ryu-manager ryu.app.simple_switch_13
-  Run Mininet again
-  sudo mn --topo linear,2 --controller remote
-  Test again
-  pingall
+Expected Output:
+
+0% packet loss
+🔹 Step 7: Exit Mininet
+exit
+🔹 Step 8: Check Flow Rules
+sudo ovs-ofctl -O OpenFlow13 dump-flows s1
+sudo ovs-ofctl -O OpenFlow13 dump-flows s2
+🔹 Step 9: Regression Test
+Delete flows
+sudo ovs-ofctl del-flows s1
+sudo ovs-ofctl del-flows s2
+Restart Controller (Terminal 1)
+ryu-manager ryu.app.simple_switch_13
+Run Mininet again
+sudo mn --topo linear,2 --controller remote
+Test again
+pingall
+
+Expected Output:
+
+0% packet loss
 
 EXPECTED OUTPUT SCREENSHOTS
 
