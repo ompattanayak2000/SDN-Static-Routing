@@ -117,6 +117,8 @@ EXPECTED OUTPUT SCREENSHOTS
 ![Ping](images/3_demo.png)
 ## 📸 Choice 5 In User Based Menu
 ![Ping](images/5_demo.png)
+## 📸 Choice 5 (Extra Port Statistics) In User Based Menu 
+![Ping](images/5_1_demo.png)
 ## 📸 Choice 6 In User Based Menu
 ![Ping](images/6_demo.png)
 ## 📸 Choice 7 In User Based Menu
