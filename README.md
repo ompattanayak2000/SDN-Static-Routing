@@ -109,6 +109,18 @@ EXPECTED OUTPUT SCREENSHOTS
 ## 📸 Ping Success
 ![Ping](images/CN_Image2.png)
 ![Ping](images/CN_Image9.png)
+## 📸 Mininet Statistics
+![Ping](images/mininetstats.png)
+## 📸 Choice 2 In User Based Menu
+![Ping](images/2_demo.png)
+## 📸 Choice 3 In User Based Menu
+![Ping](images/3_demo.png)
+## 📸 Choice 5 In User Based Menu
+![Ping](images/5_demo.png)
+## 📸 Choice 6 In User Based Menu
+![Ping](images/6_demo.png)
+## 📸 Choice 7 In User Based Menu
+![Ping](images/7_demo.png)
 ## 📸 Flow Table - s1
 ![Flow s1](images/CN_Image5.png)
 ## 📸 Flow Table - s2
