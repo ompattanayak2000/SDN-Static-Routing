@@ -89,19 +89,10 @@ sudo ovs-ofctl del-flows s1
 sudo ovs-ofctl del-flows s2
 ```
 
-Restart Controller (Terminal 1):
-```bash
-ryu-manager ryu.app.simple_switch_13
-```
+### 🔹 Step 9: User Based Menu for Functionalities
 
-Run Mininet again:
 ```bash
-sudo mn --topo linear,2 --controller remote
-```
-
-Test again:
-```bash
-pingall
+python3 sdn_demo_ui.py
 ```
 
 Expected Output:
